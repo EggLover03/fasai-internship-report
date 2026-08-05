@@ -1,0 +1,66 @@
+% ============================================================
+% Engineering Internship Essay/Report
+% University of Szeged, Faculty of Agriculture
+% Agricultural Engineering BSc
+% Track: Plant Production and Horticulture Practice
+%        (Greenhouse tomato production)
+%
+% Compile with: pdflatex -> biber -> pdflatex -> pdflatex
+% (biber is only needed if you use \cite / references.bib)
+% ============================================================
+\documentclass[12pt,a4paper]{article}
+
+% ---------- Formal requirements from the guide ----------
+% Times New Roman, 12pt, single line spacing, justified, margins 2.5 cm
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{newtxtext,newtxmath} % Times New Roman-like font (pdflatex-friendly)
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\singlespacing
+
+% ---------- Other packages ----------
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage[style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib}
+
+% ---------- Placeholder helper ----------
+% Marks text you still need to fill in / write yourself.
+\newcommand{\ph}[1]{\textcolor{gray}{\textit{[#1]}}}
+
+% ---------- Header/footer ----------
+\setlength{\headheight}{14.5pt}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\ph{Your Name}}
+\lhead{Engineering Internship Report}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+
+\input{titlepage}
+
+\tableofcontents
+\newpage
+
+\input{content}
+
+\newpage
+\printbibliography[title={References}]
+
+\newpage
+\input{appendix}
+
+\newpage
+\input{declaration}
+
+\end{document}
