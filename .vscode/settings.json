@@ -20,11 +20,14 @@
   ],
   "latex-workshop.latex.recipe.default": "latexmk (pdflatex + biber)",
   "latex-workshop.latex.autoBuild.run": "onSave",
+  // NOTE: *.synctex.gz is deliberately absent from this list. It is the file
+  // that maps PDF positions to .tex line numbers, so cleaning it after every
+  // build would silently break the double-click sync configured below.
   "latex-workshop.latex.clean.fileExtensions": [
     "*.aux", "*.bbl", "*.bcf", "*.blg", "*.idx", "*.ind", "*.lof",
     "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg",
     "*.glo", "*.gls", "*.ist", "*.fls", "*.log", "*.fdb_latexmk",
-    "*.run.xml", "*.synctex.gz"
+    "*.run.xml"
   ],
   "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.view.pdf.viewer": "tab",
