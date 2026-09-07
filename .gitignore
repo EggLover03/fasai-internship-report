@@ -12,3 +12,8 @@
 
 # Build output — regenerate with latexmk; keeps ~10 MB blobs out of history
 main.pdf
+
+# Signed declaration: contains a handwritten signature, company stamp and
+# grade. Deliberately NOT tracked, because this repository is public.
+# Keep the file locally so Appendix B builds; see figures/README.md.
+figures/declaration-signed.jpg

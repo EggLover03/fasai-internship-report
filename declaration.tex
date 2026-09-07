@@ -3,39 +3,25 @@
 % declaration (Appendix 2 of the guide). The guide requires
 % this to be a copy of the SIGNED AND STAMPED original.
 %
-% Preferred approach: scan the signed paper form and include
-% it as an image (uncomment the includegraphics block below
-% and delete the reproduced form) so the actual signature and
-% stamp appear in the PDF.
-%
-% The reproduced form below is provided only as a fallback /
-% reference layout.
+% The scanned signed original is now included below. The
+% previously typeset fallback version of the form has been
+% removed; it remains available in the git history if the
+% scan ever needs to be replaced by a reproduced layout.
 % ============================================================
 \section*{Appendix B -- Internship Leader's Declaration}
 \addcontentsline{toc}{section}{Appendix B -- Internship Leader's Declaration}
 
-% --- Preferred: scanned signed copy ---
-% \begin{center}
-%   \includegraphics[width=\textwidth,page=1]{scans/declaration_signed.pdf}
-% \end{center}
+Copy of the signed and stamped original, completed by the internship leader.
 
-\begin{center}
-\textbf{The Internship Leader's declaration about the completion of the Engineering Internship}
-\end{center}
-
-\vspace{1em}
-The undersigned Ákos Magyar, Greenhouse Production Manager, certify that Nuengmanixai Siliphon, student of Faculty of Agriculture, University of Szeged, spent her/his Engineering Internship from 13 July 2026 until 21 August 2026 at Szentesi Paradicsom Kft., Fűz-telep, Szegvár, Hungary.
-
-\vspace{1em}
-I confirm that he/she accomplished their professional duties, wrote a daily diary about the tasks which corresponds to reality.
-
-\vspace{1em}
-I grade his/her professional activity to be: \ph{excellent (5) / good (4) / satisfactory (3) / pass (2) / fail (1)}
-
-\vspace{1em}
-My professional opinion about the student's activities:
-
-\ph{...}
-
-\vspace{2em}
-Date: \ph{...} \hfill \ph{signature, stamp}
+% The scan is intentionally untracked in git (this repository is public and
+% the form carries a signature, company stamp and grade). Guard the include
+% so a fresh clone still compiles without it.
+\IfFileExists{figures/declaration-signed.jpg}{%
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.85\textheight,keepaspectratio]{declaration-signed.jpg}
+  \end{center}
+}{%
+  \ph{The signed declaration scan is not present in this working copy. The file
+  \texttt{figures/declaration-signed.jpg} is deliberately not tracked in git --
+  see \texttt{figures/README.md}. Copy it in to include the signed form here.}
+}
