@@ -9,3 +9,6 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Build output — regenerate with latexmk; keeps ~10 MB blobs out of history
+main.pdf
