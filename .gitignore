@@ -10,8 +10,9 @@
 *.fdb_latexmk
 *.synctex.gz
 
-# Build output — regenerate with latexmk; keeps ~10 MB blobs out of history
-main.pdf
+# Build output — latexmk writes everything here (see $out_dir in .latexmkrc).
+# Regenerate with latexmk; keeps ~10 MB PDF blobs out of history.
+pdf/
 
 # Signed declaration: contains a handwritten signature, company stamp and
 # grade. Deliberately NOT tracked, because this repository is public.

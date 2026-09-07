@@ -28,7 +28,9 @@
   ],
   "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latex.outDir": "%DIR%",
+  // Build output lives in pdf/ — must match $out_dir in .latexmkrc, otherwise
+  // LaTeX Workshop looks for the PDF in the project root and reports it missing.
+  "latex-workshop.latex.outDir": "%DIR%/pdf",
 
   // SyncTeX: double-click in the PDF jumps to the matching .tex line (reverse search),
   // and the cursor position in .tex is synced to the PDF after each build (forward search).
